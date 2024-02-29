@@ -50,7 +50,13 @@ docker run -d -p 5432:5432 --name postgres-container -v /path/to/data/folder:/da
 **Note**: Replace `/absolute/path/to/data/folder` with the absolute path to your folder containing CSV files.
 
 This command will start a PostgreSQL container named moviedb-container and expose port 5432 for database access.
-5. Access the PostgreSQL database using your preferred client (e.g., pgAdmin, DBeaver) with the following credentials:
+
+5. After starting the PostgreSQL container, execute the following command to import the data from the CSV files into the database:
+```bash 
+docker exec -i postgres-container psql -U postgres -d moviedb -f import-data.sql
+```
+
+6. Access the PostgreSQL database using your preferred client (e.g., pgAdmin, DBeaver) with the following credentials:
 - **Host:** localhost
 - **Port:** 5432
 - **Database:** moviedb

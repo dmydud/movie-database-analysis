@@ -9,5 +9,8 @@ ENV POSTGRES_DB moviedb
 # Copy SQL script to initialize database
 COPY create-tables.sql /docker-entrypoint-initdb.d/
 
+# Copy SQL script for importing data
+COPY import-data.sql /import-data.sql
+
 # Expose PostgreSQL port
 EXPOSE 5432
