@@ -2,6 +2,17 @@
 
 This project aims to analyze the MovieLens dataset using PostgreSQL database for data storage and analysis. The dataset contains 5-star ratings and free-text tagging activity from [MovieLens](http://movielens.org), a movie recommendation service. It includes 100,000 ratings and 3,600 tag applications across 9,000 movies, created by 600 users between January 09, 1995, and September 24, 2018.
 
+## Table of Contents
+- [SQL Query Showcase](#sql-query-showcase)
+- [Database](#database)
+- [Dockerized PostgreSQL](#dockerized-postgresql)
+- [Requirements](#requirements)
+- [Licensing](#licensing)
+
+## SQL Query Showcase
+
+In the file [SQLQueryShowcase.md](SQLQueryShowcase.md), you'll find a curated collection of SQL queries showcasing various data manipulation tasks. These queries range from simple data retrieval to complex analyses, demonstrating proficiency in SQL query writing and data manipulation techniques.
+
 ## Database
 
 ### Database Description
