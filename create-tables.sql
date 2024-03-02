@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS ratings (
     userId INT,
     movieId INT REFERENCES movies(movieId),
     rating FLOAT,
-    timestamp TIMESTAMP
+    timestamp BIGINT
 );
 
 CREATE TABLE IF NOT EXISTS tags (
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS tags (
     userId INT,
     movieId INT REFERENCES movies(movieId),
     tag VARCHAR(255),
-    timestamp TIMESTAMP
+    timestamp BIGINT
 );
 
 CREATE TABLE IF NOT EXISTS links (
@@ -26,3 +26,14 @@ CREATE TABLE IF NOT EXISTS links (
     tmdbId VARCHAR(20)
 );
 
+CREATE TABLE IF NOT EXISTS genome_scores (
+    movieId INT,
+    tagId INT,
+    relevance FLOAT,
+    PRIMARY KEY (movieId, tagId)
+);
+
+CREATE TABLE IF NOT EXISTS genome_tags (
+    tagId INT PRIMARY KEY,
+    tag VARCHAR(255)
+);

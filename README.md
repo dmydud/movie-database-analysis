@@ -1,6 +1,6 @@
 # Movie Database Analysis
 
-This project aims to analyze the MovieLens dataset using PostgreSQL database for data storage and analysis. The dataset contains 5-star ratings and free-text tagging activity from [MovieLens](http://movielens.org), a movie recommendation service. It includes 100,000 ratings and 3,600 tag applications across 9,000 movies, created by 600 users between January 09, 1995, and September 24, 2018.
+This project aims to analyze the MovieLens dataset (ml-25m) using PostgreSQL database for data storage and analysis. The dataset describes 5-star rating and free-text tagging activity from [MovieLens](http://movielens.org), a movie recommendation service. It contains 25,000,095 ratings and 1,093,360 tag applications across 62,423 movies. These data were created by 162,541 users between January 09, 1995, and November 21, 2019.
 
 ## Table of Contents
 - [SQL Query Showcase](#sql-query-showcase)
@@ -23,6 +23,8 @@ The PostgreSQL database schema used for this project consists of several tables 
 - `tags`: Stores user-generated metadata tags for movies.
 - `movies`: Holds movie information including title, genres, and identifiers.
 - `links`: Provides identifiers to link to other sources of movie data.
+- `genome_scores`: Contains movie-tag relevance data.
+- `genome_tags`: Provides tag descriptions for the tag IDs.
 
 ### Dataset Citation
 

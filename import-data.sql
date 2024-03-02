@@ -1,15 +1,19 @@
--- import movies table
+-- Import movies table
 COPY movies (movieId, title, genres) FROM '/data/movies.csv' DELIMITER ',' CSV HEADER;
 
--- import links table
+-- Import links table
 COPY links (movieId, imdbId, tmdbId) FROM '/data/links.csv' DELIMITER ',' CSV HEADER;
 
--- import tags table
-ALTER TABLE tags ALTER COLUMN timestamp TYPE TEXT;
+-- Import tags table
 COPY tags (userId, movieId, tag, timestamp) FROM '/data/tags.csv' DELIMITER ',' CSV HEADER;
-UPDATE tags SET timestamp = to_timestamp(timestamp::bigint);
+UPDATE tags SET timestamp = to_timestamp(timestamp);
 
--- import ratings table
-ALTER TABLE ratings ALTER COLUMN timestamp TYPE TEXT;
+-- Import ratings table
 COPY ratings (userId, movieId, rating, timestamp) FROM '/data/ratings.csv' DELIMITER ',' CSV HEADER;
-UPDATE ratings SET timestamp = to_timestamp(timestamp::bigint);
+UPDATE ratings SET timestamp = to_timestamp(timestamp);
+
+-- Import genome_scores table
+COPY genome_scores (movieId, tagId, relevance) FROM '/data/genome-scores.csv' DELIMITER ',' CSV HEADER;
+
+-- Import genome_tags table
+COPY genome_tags (tagId, tag) FROM '/data/genome-tags.csv' DELIMITER ',' CSV HEADER;
