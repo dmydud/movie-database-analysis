@@ -1,17 +1,28 @@
 # Movie Database Analysis
 
-This project aims to analyze the MovieLens dataset (ml-25m) using PostgreSQL database for data storage and analysis. The dataset describes 5-star rating and free-text tagging activity from [MovieLens](http://movielens.org), a movie recommendation service. It contains 25,000,095 ratings and 1,093,360 tag applications across 62,423 movies. These data were created by 162,541 users between January 09, 1995, and November 21, 2019.
+This project aims to analyze the MovieLens dataset (ml-25m) using PostgreSQL database for data storage and analysis, along with visualizations created in Tableau. The dataset describes 5-star rating and free-text tagging activity from [MovieLens](http://movielens.org), a movie recommendation service. It contains 25,000,095 ratings and 1,093,360 tag applications across 62,423 movies. These data were created by 162,541 users between January 09, 1995, and November 21, 2019.
 
 ## Table of Contents
 - [SQL Query Showcase](#sql-query-showcase)
+- [Tableau Workbook](#tableau-workbook)
 - [Database](#database)
+  - [Database Description](#database-description)
+  - [Dataset Citation](#dataset-citation)
+  - [Further Information](#further-information)
+  - [Database Access](#database-access)
 - [Dockerized PostgreSQL](#dockerized-postgresql)
+  - [Docker Setup](#docker-setup)
 - [Requirements](#requirements)
 - [Licensing](#licensing)
-
 ## SQL Query Showcase
 
 In the file [SQLQueryShowcase.md](SQLQueryShowcase.md), you'll find a curated collection of SQL queries showcasing various data manipulation tasks. These queries range from simple data retrieval to complex analyses, demonstrating proficiency in SQL query writing and data manipulation techniques.
+
+## Tableau Workbook
+
+Explore the visualizations and analysis of the movie ratings dataset using  Tableau:
+
+[Tableau Workbook - Movie Ratings Analysis](https://public.tableau.com/shared/R66WJCPSD?:display_count=n&:origin=viz_share_link)
 
 ## Database
 
