@@ -1,11 +1,25 @@
-# Movie Database Analysis
+# Movie Database EDA
 
-This project aims to analyze the MovieLens dataset (ml-25m) using PostgreSQL database for data storage and analysis. The dataset describes 5-star rating and free-text tagging activity from [MovieLens](http://movielens.org), a movie recommendation service. It contains 25,000,095 ratings and 1,093,360 tag applications across 62,423 movies. These data were created by 162,541 users between January 09, 1995, and November 21, 2019.
+This project aims to perform Exploratory Data Analysis (EDA) on the MovieLens dataset (ml-25m) using PostgreSQL for data storage and analysis, along with visualizations created in Tableau. The dataset describes 5-star rating and free-text tagging activity from [MovieLens](http://movielens.org), a movie recommendation service. It contains 25,000,095 ratings and 1,093,360 tag applications across 62,423 movies. These data were created by 162,541 users between January 09, 1995, and November 21, 2019.
+
+## Tableau Dashboard
+
+Explore the visualizations and analysis of the movie ratings dataset using Tableau:
+
+![Dashboard img](https://github.com/dmydud/movie-database-eda/blob/main/MovieLens-25M%20EDA.png)
+
+[Tableau Dashboard - Movie Ratings EDA](https://public.tableau.com/views/MovieLens-25MEDA/EDA?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ## Table of Contents
+- [Tableau Dashboard](#tableau-dashboard)
 - [SQL Query Showcase](#sql-query-showcase)
 - [Database](#database)
+  - [Database Description](#database-description)
+  - [Dataset Citation](#dataset-citation)
+  - [Further Information](#further-information)
+  - [Database Access](#database-access)
 - [Dockerized PostgreSQL](#dockerized-postgresql)
+  - [Docker Setup](#docker-setup)
 - [Requirements](#requirements)
 - [Licensing](#licensing)
 
@@ -38,7 +52,7 @@ For more details about the MovieLens dataset and the GroupLens research group, v
 
 ### Database Access
 
-The MovieLens dataset is not stored directly in this repository. You can download the dataset from the [GroupLens datasets page](https://grouplens.org/datasets/).
+The MovieLens dataset is not stored directly in this repository. You can download the dataset from the [GroupLens datasets page](https://grouplens.org/datasets/movielens/25m/).
 
 ## Dockerized PostgreSQL
 
@@ -48,40 +62,41 @@ To simplify database setup, this project uses Docker to run a PostgreSQL contain
 
 1. Make sure you have Docker installed on your system.
 2. Clone the repository:
-```bash
-git clone https://github.com/dmydud/movie-database-analysis
-```
+    ```bash
+    git clone https://github.com/dmydud/movie-database-eda
+    cd movie-database-eda
+    ```
 3. Build the Docker image:
-```bash 
-docker build -t moviedb-postgres .
-```
+    ```bash 
+    docker build -t moviedb-postgres .
+    ```
 4. Run the PostgreSQL container:
-```bash 
-docker run -d -p 5432:5432 --name postgres-container -v /path/to/data/folder:/data moviedb-postgres
-```
+    ```bash 
+    docker run -d -p 5432:5432 --name postgres-container -v /path/to/data/folder:/data moviedb-postgres
+    ```
 
-**Note**: Replace `/absolute/path/to/data/folder` with the absolute path to your folder containing CSV files.
+    **Note**: Replace `/absolute/path/to/data/folder` with the absolute path to your folder containing CSV files.
 
-This command will start a PostgreSQL container named moviedb-container and expose port 5432 for database access.
+    This command will start a PostgreSQL container named moviedb-container and expose port 5432 for database access.
 
 5. After starting the PostgreSQL container, execute the following command to import the data from the CSV files into the database:
-```bash 
-docker exec -i postgres-container psql -U postgres -d moviedb -f import-data.sql
-```
+    ```bash 
+    docker exec -i postgres-container psql -U postgres -d moviedb -f import-data.sql
+    ```
 
 6. Access the PostgreSQL database using your preferred client (e.g., pgAdmin, DBeaver) with the following credentials:
-- **Host:** localhost
-- **Port:** 5432
-- **Database:** moviedb
-- **Username:** postgres
-- **Password:** password
+    - **Host:** localhost
+    - **Port:** 5432
+    - **Database:** moviedb
+    - **Username:** postgres
+    - **Password:** password
 
 ## Requirements
 
 To run this project, you'll need:
 
 - Docker: To set up and run the PostgreSQL database container.
-- PostgreSQL client: To interact with the database. You can use pgAdmin.
+- PostgreSQL client: To interact with the database. You can use [pgAdmin](https://www.pgadmin.org) or [DBeaver](https://dbeaver.io).
 - Git: To clone the repository.
 
 ## Licensing
