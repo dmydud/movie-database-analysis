@@ -6,9 +6,11 @@ This project aims to perform Exploratory Data Analysis (EDA) on the MovieLens da
 
 Explore the visualizations and analysis of the movie ratings dataset using Tableau:
 
-![Dashboard img](https://github.com/dmydud/movie-database-eda/blob/main/MovieLens-25M%20EDA.png)
+![Dashboard img1](https://github.com/dmydud/movie-database-eda/blob/main/MovieLens-25M%20EDA%20Summary.png)
 
-[Tableau Dashboard - Movie Ratings EDA](https://public.tableau.com/views/MovieLens-25MEDA/EDA?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+![Dashboard img2](https://github.com/dmydud/movie-database-eda/blob/main/MovieLens-25M%20EDA%20Movie.png)
+
+[Tableau Dashboard - Movie Ratings EDA](https://public.tableau.com/views/MovieLens-25M_EDA/EDA?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ## Table of Contents
 - [Tableau Dashboard](#tableau-dashboard)
